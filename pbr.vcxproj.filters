@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="math">
+      <UniqueIdentifier>{092af98e-4c60-4747-a6b6-dcf4b0bb75fd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="geometry">
+      <UniqueIdentifier>{87feb0f7-ad09-4bcc-86ad-5642e052dac3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="shape">
+      <UniqueIdentifier>{5e86934d-e7a9-4dbf-a88d-a869e129f094}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="system">
+      <UniqueIdentifier>{0a33ed79-4894-4d9f-a152-825cbd8b7f3c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="util">
+      <UniqueIdentifier>{fafb7732-faed-4a17-8ff4-0096659e149a}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="math\matrix.cpp">
+      <Filter>math</Filter>
+    </ClCompile>
+    <ClCompile Include="math\pmath.cpp">
+      <Filter>math</Filter>
+    </ClCompile>
+    <ClCompile Include="math\quaternion.cpp">
+      <Filter>math</Filter>
+    </ClCompile>
+    <ClCompile Include="math\transform.cpp">
+      <Filter>math</Filter>
+    </ClCompile>
+    <ClCompile Include="geometry\geometry.cpp">
+      <Filter>geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="util\Parameter.cpp">
+      <Filter>util</Filter>
+    </ClCompile>
+    <ClCompile Include="system\memory.cpp">
+      <Filter>system</Filter>
+    </ClCompile>
+    <ClCompile Include="shape\cylinder.cpp">
+      <Filter>shape</Filter>
+    </ClCompile>
+    <ClCompile Include="shape\disk.cpp">
+      <Filter>shape</Filter>
+    </ClCompile>
+    <ClCompile Include="shape\shape.cpp">
+      <Filter>shape</Filter>
+    </ClCompile>
+    <ClCompile Include="shape\sphere.cpp">
+      <Filter>shape</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="math\matrix.h">
+      <Filter>math</Filter>
+    </ClInclude>
+    <ClInclude Include="math\pmath.h">
+      <Filter>math</Filter>
+    </ClInclude>
+    <ClInclude Include="math\point.h">
+      <Filter>math</Filter>
+    </ClInclude>
+    <ClInclude Include="math\quaternion.h">
+      <Filter>math</Filter>
+    </ClInclude>
+    <ClInclude Include="math\transform.h">
+      <Filter>math</Filter>
+    </ClInclude>
+    <ClInclude Include="math\vector.h">
+      <Filter>math</Filter>
+    </ClInclude>
+    <ClInclude Include="geometry\geometry.h">
+      <Filter>geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="util\Parameter.h">
+      <Filter>util</Filter>
+    </ClInclude>
+    <ClInclude Include="system\memory.h">
+      <Filter>system</Filter>
+    </ClInclude>
+    <ClInclude Include="shape\cylinder.h">
+      <Filter>shape</Filter>
+    </ClInclude>
+    <ClInclude Include="shape\disk.h">
+      <Filter>shape</Filter>
+    </ClInclude>
+    <ClInclude Include="shape\shape.h">
+      <Filter>shape</Filter>
+    </ClInclude>
+    <ClInclude Include="shape\sphere.h">
+      <Filter>shape</Filter>
+    </ClInclude>
+    <ClInclude Include="pbr.h" />
+  </ItemGroup>
+</Project>
