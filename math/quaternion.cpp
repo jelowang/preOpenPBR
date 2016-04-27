@@ -1,7 +1,7 @@
 
 //	'OpenPBR' prototype
 //	A Light-Weighted Implementation of 
-//	'Physically Based Renderer' According to <Physically Based Renderer From Theory to Implementation>
+//	'Physically Based Renderer' According to <Physically Based Rendering From Theory to Implementation>
 //	(C) Quantum Dynamics Lab.
 //	Jelo 2016
 //	http://tok.cc
@@ -24,8 +24,7 @@ Quaternion::Quaternion ( const Transform& t ) {
         v.x = (m.m[2][1] - m.m[1][2]) * s;
         v.y = (m.m[0][2] - m.m[2][0]) * s;
         v.z = (m.m[1][0] - m.m[0][1]) * s;
-    }
-    else {
+    } else {
         // Compute largest of $x$, $y$, or $z$, then remaining components
         const int nxt[3] = {1, 2, 0};
         float q[3];

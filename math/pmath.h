@@ -1,7 +1,7 @@
 
 //	'OpenPBR' prototype
 //	A Light-Weighted Implementation of 
-//	'Physically Based Renderer' According to <Physically Based Renderer From Theory to Implementation>
+//	'Physically Based Renderer' According to <Physically Based Rendering From Theory to Implementation>
 //	(C) Quantum Dynamics Lab.
 //	Jelo 2016
 //	http://tok.cc
@@ -47,19 +47,17 @@ inline float Clamp ( float val , float low , float high ) {
     else return val ;
 }
 
-// Global Inline Functions
 inline float Lerp(float t, float v1, float v2) {
     return (1.f - t) * v1 + t * v2;
 }
 
 inline bool Quadratic ( float A, float B , float C , float* t0 , float* t1 ) {
 
-    // Find quadratic discriminant
+
     float discrim = B * B - 4.f * A * C;
     if (discrim < 0.) return false;
     float rootDiscrim = sqrtf(discrim);
 
-    // Compute quadratic _t_ values
     float q;
     if (B < 0) q = -.5f * (B - rootDiscrim);
     else       q = -.5f * (B + rootDiscrim);
