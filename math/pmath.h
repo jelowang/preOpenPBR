@@ -42,30 +42,43 @@ using std::swap ;
 #define MAX(a,b) (a>b) ? a : b
 
 inline float Clamp ( float val , float low , float high ) {
-    if (val < low) return low ;
-    else if (val > high) return high ;
-    else return val ;
+
+    if (val < low) 
+		return low ;
+    else if (val > high) 
+		return high ;
+    else 
+		return val ;
+
 }
 
 inline float Lerp(float t, float v1, float v2) {
-    return (1.f - t) * v1 + t * v2;
+    return ( 1.0f - t ) * v1 + t * v2 ;
 }
 
 inline bool Quadratic ( float A, float B , float C , float* t0 , float* t1 ) {
 
+	float q = 0.0f ;
 
-    float discrim = B * B - 4.f * A * C;
-    if (discrim < 0.) return false;
-    float rootDiscrim = sqrtf(discrim);
+    float discrim = B * B - 4.f * A * C ;
+    
+	if ( 0.0f > discrim )
+		return false ;
+    
+	float rootDiscrim = sqrtf(discrim) ;
 
-    float q;
-    if (B < 0) q = -.5f * (B - rootDiscrim);
-    else       q = -.5f * (B + rootDiscrim);
-    *t0 = q / A;
-    *t1 = C / q;
-    if (*t0 > *t1) swap(*t0, *t1);
+	if ( 0 > B )
+		q = -.5f * (B - rootDiscrim) ;
+    else       
+		q = -.5f * (B + rootDiscrim) ;
+    
+	*t0 = q / A ;
+    *t1 = C / q ;
 
-    return true;
+	if (*t0 > *t1) 
+		swap( *t0 , *t1 ) ;
+
+    return true ;
 }
 
 #endif

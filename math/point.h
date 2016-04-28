@@ -82,7 +82,7 @@ public :
         return Vector(x - p.x, y - p.y, z - p.z);
     }
 
-	inline Point operator * (float scale) { 
+	inline Point operator * (float scale) const { 
 		Point r ( 
 			this->x * scale ,
 			this->y * scale , 
@@ -103,6 +103,14 @@ public :
 		return r ;
 
 	}
+
+    Point &operator += (const Point &p) {
+        assert(!p.HasNaNs()) ;
+        x += p.x ; 
+		y += p.y ; 
+		z += p.z ;
+        return *this ;
+    }
 
 	inline float Dot ( const Point& v ) {
 		float r = 0.0f ;
@@ -171,10 +179,16 @@ public :
         return (&x)[i];
     }
 
+public :
 	float x ;
 	float y ;
 	float z ;
 
 } ;
+
+inline Point operator* ( float f , const Point& p ) {
+    assert(!p.HasNaNs()) ;
+    return p*f ;
+}
 
 #endif

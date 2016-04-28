@@ -10,8 +10,8 @@
 #pragma once
 #endif
 
-#ifndef __PBR_QUATERNION__H
-#define __PBR_QUATERNION__H
+#ifndef Quaternion_H
+#define Quaternion_H
 
 #include "pbr.h"
 #include "Vector.h"
@@ -24,10 +24,12 @@ class Transform ;
 class Quaternion
 {
 public :
+
 	Quaternion () {
 		v = Vector ( 0.f , 0.f , 0.f ) ;
 		w = 1.f ;
 	}
+
 	~Quaternion () {}
 
 	Quaternion ( const Transform& t ) ;
@@ -37,7 +39,7 @@ public :
     Quaternion& operator += ( const Quaternion& q ) {
         v = v + q.v ;
         w += q.w ; 
-        return *this;
+        return *this ;
     }
 
     friend Quaternion operator + ( const Quaternion& q1 , const Quaternion& q2 ) {
@@ -82,6 +84,7 @@ public :
         return ret ;
     } 
 
+public :
 	Vector v ;
 	float w ;
 
@@ -90,7 +93,6 @@ public :
 inline Quaternion operator * ( float f , const Quaternion& q ) {
     return q * f ;
 }
-
 
 inline float Dot (const Quaternion &q1, const Quaternion &q2) {
     return Dot(q1.v, q2.v) + q1.w * q2.w ;

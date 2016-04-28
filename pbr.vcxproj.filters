@@ -52,6 +52,15 @@
       <Filter>shape</Filter>
     </ClCompile>
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="shape\cone.cpp">
+      <Filter>shape</Filter>
+    </ClCompile>
+    <ClCompile Include="shape\paraboloid.cpp">
+      <Filter>shape</Filter>
+    </ClCompile>
+    <ClCompile Include="shape\hyperboloid.cpp">
+      <Filter>shape</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="math\matrix.h">
@@ -94,5 +103,14 @@
       <Filter>shape</Filter>
     </ClInclude>
     <ClInclude Include="pbr.h" />
+    <ClInclude Include="shape\cone.h">
+      <Filter>shape</Filter>
+    </ClInclude>
+    <ClInclude Include="shape\paraboloid.h">
+      <Filter>shape</Filter>
+    </ClInclude>
+    <ClInclude Include="shape\hyperboloid.h">
+      <Filter>shape</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

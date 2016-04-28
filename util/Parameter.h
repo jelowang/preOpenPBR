@@ -14,6 +14,8 @@
 #define Parameter_H
 
 #include "pbr.h"
+#include "point.h"
+#include "vector.h"
 
 class Parameter 
 {
@@ -24,8 +26,13 @@ public :
 	void addFloat ( const char* name , float value ) ;
 	float getFloat ( const char* name , float value ) ;
 
+	void addPoint ( const char* name , const Point& point ) ;
+	Point* getPoint ( const char* name , const Point& point ) ;
+
 private :
 	std::map < const char* , float > floatMap ;
+	std::map < const char* , Point* > pointMap ;
+	std::map < const char* , Vector* > vectorMap ;
 } ;
 
 #endif

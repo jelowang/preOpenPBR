@@ -16,16 +16,16 @@ Quaternion::Quaternion ( const Transform& t ) {
     float trace = m.m[0][0] + m.m[1][1] + m.m[2][2];
 
     if (trace > 0.f) {
-        // Compute w from matrix trace, then xyz
-        // 4w^2 = m[0][0] + m[1][1] + m[2][2] + m[3][3] (but m[3][3] == 1)
+
         float s = sqrtf(trace + 1.0);
         w = s / 2.0f;
         s = 0.5f / s;
         v.x = (m.m[2][1] - m.m[1][2]) * s;
         v.y = (m.m[0][2] - m.m[2][0]) * s;
         v.z = (m.m[1][0] - m.m[0][1]) * s;
+
     } else {
-        // Compute largest of $x$, $y$, or $z$, then remaining components
+
         const int nxt[3] = {1, 2, 0};
         float q[3];
         int i = 0;
@@ -42,6 +42,7 @@ Quaternion::Quaternion ( const Transform& t ) {
         v.x = q[0];
         v.y = q[1];
         v.z = q[2];
+
     }
 
 }

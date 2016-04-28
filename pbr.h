@@ -15,4 +15,8 @@
 
 using namespace std ;
 
+#include <float.h>
+#define isnan _isnan
+#define isinf(f) (!_finite((f)))
+
 #endif

@@ -17,8 +17,11 @@
     <ClCompile Include="math\pmath.cpp" />
     <ClCompile Include="math\quaternion.cpp" />
     <ClCompile Include="math\transform.cpp" />
+    <ClCompile Include="shape\cone.cpp" />
     <ClCompile Include="shape\cylinder.cpp" />
     <ClCompile Include="shape\disk.cpp" />
+    <ClCompile Include="shape\hyperboloid.cpp" />
+    <ClCompile Include="shape\paraboloid.cpp" />
     <ClCompile Include="shape\shape.cpp" />
     <ClCompile Include="shape\sphere.cpp" />
     <ClCompile Include="system\memory.cpp" />
@@ -33,8 +36,11 @@
     <ClInclude Include="math\transform.h" />
     <ClInclude Include="math\vector.h" />
     <ClInclude Include="pbr.h" />
+    <ClInclude Include="shape\cone.h" />
     <ClInclude Include="shape\cylinder.h" />
     <ClInclude Include="shape\disk.h" />
+    <ClInclude Include="shape\hyperboloid.h" />
+    <ClInclude Include="shape\paraboloid.h" />
     <ClInclude Include="shape\shape.h" />
     <ClInclude Include="shape\sphere.h" />
     <ClInclude Include="system\memory.h" />

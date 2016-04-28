@@ -31,10 +31,10 @@ public :
 	virtual BBox ObjectBound () const = 0 ;
 	virtual BBox WorldBound () const ;
 	bool CanIntersect () const ;
-    virtual bool Intersect ( const Ray& ray , float *tHit , float *rayEpsilon , DifferentialGeometry *dg ) const ;
+	virtual bool Intersect ( const Ray& ray , float *tHit , float *rayEpsilon , DifferentialGeometry *dg ) const ;
 	virtual bool IntersectP ( const Ray& ray ) const;
 	void Refine( vector<Reference<Shape> >& refined ) const ;
-    virtual void GetShadingGeometry ( const Transform& obj2world , const DifferentialGeometry& dg , DifferentialGeometry* dgShading ) const ;
+	virtual void GetShadingGeometry ( const Transform& obj2world , const DifferentialGeometry& dg , DifferentialGeometry* dgShading ) const ;
 	virtual float Area() const ;
 
 public :

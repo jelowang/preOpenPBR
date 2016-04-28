@@ -10,8 +10,8 @@
 #pragma once
 #endif
 
-#ifndef __PBR_SPHERE__H
-#define __PBR_SPHERE__H
+#ifndef Sphere_H
+#define Sphere_H
 
 #include "shape.h"
 

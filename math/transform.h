@@ -20,6 +20,9 @@
 #include "geometry.h"
 #include "quaternion.h"
 
+/*
+ brief :
+*/
 class Transform
 {
 public :
@@ -43,32 +46,18 @@ public :
     }
 
 	Transform Translate ( const Vector& delta ) ;
-
 	Transform Scale ( float x , float y , float z ) ;
-
 	bool HasScale() const ;
-
 	bool SwapsHandedness() const ;
-
 	Transform RotateX ( float angle ) ;
-	
 	Transform RotateY ( float angle ) ;
-	
 	Transform RotateZ ( float angle ) ;
-	
 	Transform Rotate ( float angle , const Vector &axis ) ;
-	
 	Transform LookAt ( const Point& pos , const Point& look , const Vector& up ) ;
-	
 	bool SolveLinearSystem2x2 ( const float A[2][2] , const float B[2] ,float *x0 , float *x1 ) ;
-	
 	Transform Orthographic ( float znear, float zfar) ;
-	
 	Transform Perspective ( float fov, float znear, float zfar ) ;
 
-	/*
-	 brief : inline functions
-	*/ 
     inline Transform Inverse ( const Transform& t ){
 		return Transform ( t.inv , t.m ) ;
 	}
@@ -218,6 +207,9 @@ public :
 
 } ;
 
+/*
+ brief :
+*/
 class AnimatedTransform 
 {
 public :
@@ -230,21 +222,13 @@ public :
     }
 
     static void Decompose(const Matrix4x4 &m, Vector *T, Quaternion *R, Matrix4x4 *S);
-
     void Interpolate(float time, Transform *t) const;
-
     BBox MotionBounds(const BBox &b, bool useInverse) const;
-
     bool HasScale() const { return startTransform->HasScale() || endTransform->HasScale(); }	
-
     void operator()(const Ray &r, Ray *tr) const;
-
     void operator()(const RayDifferential &r, RayDifferential *tr) const;
-
     Point operator()(float time, const Point &p) const;
-
     Vector operator()(float time, const Vector &v) const;
-
     Ray operator()(const Ray &r) const;
 
 private :
@@ -254,7 +238,6 @@ private :
     Transform *startTransform ;
 	Transform *endTransform ;
     const bool actuallyAnimated ;
-
     Vector T[2] ;
     Quaternion R[2] ;
     Matrix4x4 S[2] ;

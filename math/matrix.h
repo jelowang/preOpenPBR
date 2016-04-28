@@ -24,16 +24,16 @@
 #include "pbr.h"
 #include "pmath.h"
 
+/*
+ brief :
+*/
 class Matrix4x4
 {
 public :
 
 	Matrix4x4 () ;
-
 	~Matrix4x4 () ;
-
     Matrix4x4 ( float mat[4][4] ) ;
-    
 	Matrix4x4 ( float t00, float t01, float t02, float t03,
               float t10, float t11, float t12, float t13,
               float t20, float t21, float t22, float t23,
@@ -41,25 +41,15 @@ public :
 
 
 	void Identify () ;
-
 	Matrix4x4 Mul ( float scalar ) ;
-	 
 	Matrix4x4 Mul ( const Matrix4x4& a ) ;
-
 	float Determinant () ;
-
 	Matrix4x4 Inverse () ;
-
 	Matrix4x4 Transpose () ;
-
 	Matrix4x4 operator * (const Matrix4x4& M) ;
-
 	Matrix4x4 operator = (const Matrix4x4& M) ;
-
 	bool operator == (const Matrix4x4& M) ;
-
 	bool operator != (const Matrix4x4& M) ;
-
 	void Display () ;
 
 	inline void Set( int row , int col , float value ) {
@@ -82,10 +72,11 @@ public :
                 r.m[i][j] = m1.m[i][0] * m2.m[0][j] +
                             m1.m[i][1] * m2.m[1][j] + 
                             m1.m[i][2] * m2.m[2][j] +
-                            m1.m[i][3] * m2.m[3][j];
-        return r;
+                            m1.m[i][3] * m2.m[3][j] ;
+        return r ;
     }
 
+public :
 	float m[4][4] ;
 
 } ;
